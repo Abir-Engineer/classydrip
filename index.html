@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classy Drip | Premium Luxury Streetwear — Elevate Your Style</title>
+  <meta name="description" content="Classy Drip offers premium black & white minimalist streetwear. Shop exclusive signature tees, hoodies and premium sets crafted from 220 GSM heavy organic cotton.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-announcement">
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcementBar">
+    <span>🚚 Free Delivery in Dhaka City on Orders Above 2000৳</span>
+    <span style="color:rgba(255,255,255,0.4)">|</span>
+    <a href="shop.html">Shop New Arrivals →</a>
+    <button onclick="document.getElementById('announcementBar').classList.add('hidden'); document.body.classList.remove('has-announcement');" style="background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:18px;position:absolute;right:20px;">×</button>
+  </div>
+
+  <!-- MOBILE NAV OVERLAY + DRAWER -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+    <button class="mobile-nav-close" id="mobileNavClose">×</button>
+    <div class="mobile-nav-logo">Classy Drip</div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="shop.html" class="mobile-nav-link">Shop All</a></li>
+      <li><a href="shop.html?category=Men" class="mobile-nav-link">Men's Collection</a></li>
+      <li><a href="shop.html?category=Women" class="mobile-nav-link">Women's Collection</a></li>
+      <li><a href="checkout.html" class="mobile-nav-link">Checkout</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <p>© 2026 Classy Drip. Elevate Your Style.</p>
+    </div>
+  </nav>
+
+  <!-- STICKY HEADER -->
+  <header id="mainHeader">
+    <div class="container header-container">
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger-btn nav-icon" id="hamburgerBtn" title="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.jpg" alt="Classy Drip Logo" class="logo-img">
+        <span class="logo-text">Classy Drip</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop All</a></li>
+          <li><a href="shop.html?category=Men" class="nav-link">Men</a></li>
+          <li><a href="shop.html?category=Women" class="nav-link">Women</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-icon" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </a>
+        <a href="#" class="nav-icon" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </a>
+        <button class="nav-icon btn-open-cart" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero-slider" id="heroSlider">
+
+    <!-- Slide 1 -->
+    <div class="hero-slide active" id="slide0">
+      <div class="hero-slide-bg" style="background-image: url('assets/hero.png');"></div>
+      <div class="hero-slide-content container">
+        <span class="hero-subtitle">New Season 2026</span>
+        <h1 class="hero-title">Elevate Your<br><span>Streetwear</span></h1>
+        <a href="shop.html" class="hero-btn">Shop Collection</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide" id="slide1">
+      <div class="hero-slide-bg" style="background-image: url('assets/hero2.png');"></div>
+      <div class="hero-slide-content container">
+        <span class="hero-subtitle">Women's Luxury</span>
+        <h1 class="hero-title">Premium<br><span>Comfort Sets</span></h1>
+        <a href="shop.html?category=Women" class="hero-btn">Explore Women's</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide" id="slide2">
+      <div class="hero-slide-bg" style="background-image: url('assets/hero3.png');"></div>
+      <div class="hero-slide-content container">
+        <span class="hero-subtitle">Men's Essentials</span>
+        <h1 class="hero-title">The Signature<br><span>CD Look</span></h1>
+        <a href="shop.html?category=Men" class="hero-btn">Shop Men's</a>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="hero-slider-arrow prev" id="sliderPrev">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="hero-slider-arrow next" id="sliderNext">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+
+    <!-- Slider Dots -->
+    <div class="hero-slider-dots" id="sliderDots">
+      <button class="hero-dot active" data-index="0"></button>
+      <button class="hero-dot" data-index="1"></button>
+      <button class="hero-dot" data-index="2"></button>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <span class="trust-icon">🚚</span>
+      <div>
+        <div class="trust-label">Free Delivery</div>
+        <div class="trust-desc">Inside Dhaka on orders 2000৳+</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">♻️</span>
+      <div>
+        <div class="trust-label">Easy Returns</div>
+        <div class="trust-desc">7-day hassle-free exchange policy</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🧵</span>
+      <div>
+        <div class="trust-label">Premium Quality</div>
+        <div class="trust-desc">220 GSM organic heavy cotton</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🔒</span>
+      <div>
+        <div class="trust-label">Secure Payments</div>
+        <div class="trust-desc">bKash, Cards, COD — all accepted</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRAND INTRO STRIP -->
+  <section style="background-color: var(--color-bg-alt); text-align: center; padding: 80px 0;">
+    <div class="container" style="max-width: 760px;">
+      <p style="font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 20px;">Est. 2026 — Dhaka, Bangladesh</p>
+      <h2 style="font-family: var(--header-font); font-size: 34px; font-weight: 600; margin-bottom: 20px; line-height: 1.3;">Crafted for Those Who<br><em>Move with Purpose</em></h2>
+      <p style="font-size: 15px; color: var(--color-text-muted); line-height: 1.9;">
+        Classy Drip is a premium Bangladeshi streetwear label. We design garments that fuse minimalism, luxury tailoring, and urban attitude — built for the modern individual who dresses with intention.
+      </p>
+    </div>
+  </section>
+
+  <!-- CATEGORY GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+      </div>
+      <div class="category-grid">
+        <a href="shop.html?category=Men" class="category-card">
+          <img src="assets/black-tshirt.png" alt="Men's Collection" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">Men's Collection</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+        <a href="shop.html?category=Women" class="category-card">
+          <img src="assets/white-tshirt.png" alt="Women's Collection" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">Women's Collection</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+        <a href="shop.html" class="category-card">
+          <img src="assets/hero.png" alt="Premium Sets" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-name">Premium Sets</h3>
+            <span class="category-cta">Shop Now →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Drops</h2>
+        <a href="shop.html" class="section-link">View All</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo-banner">
+    <div class="promo-banner-bg" style="background-image: url('assets/hero2.png');"></div>
+    <div class="container">
+      <div class="promo-banner-content">
+        <span class="promo-tag">Limited Drop</span>
+        <h2 class="promo-title">The Premium<br>Comfort Set</h2>
+        <p class="promo-desc">Matching hoodies and trousers in premium French terry — designed for everyday luxury.</p>
+        <a href="shop.html" class="promo-btn">Explore Sets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MORE PRODUCTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">More to Explore</h2>
+        <a href="shop.html" class="section-link">See All</a>
+      </div>
+      <div class="product-grid" id="moreGrid"></div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button class="cart-drawer-close" id="closeCart">×</button>
+    </div>
+    <div class="cart-items-container" id="cartItems"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">0 ৳</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">
+        Proceed to Checkout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Classy Drip</div>
+          <p class="footer-about-text">Premium luxury streetwear designed to elevate your everyday aesthetics. Bold design, meticulous tailoring — made in Bangladesh.</p>
+        </div>
+        <div>
+          <h4 class="footer-column-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html" class="footer-link">All Products</a></li>
+            <li><a href="shop.html?category=Men" class="footer-link">Men's Tees</a></li>
+            <li><a href="shop.html?category=Women" class="footer-link">Women's</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Size Guides</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p class="footer-newsletter-text">Exclusive drops and style edits — straight to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('You\'re subscribed!');">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="btn-newsletter">Join</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Classy Drip Store. All Rights Reserved.</div>
+        <div style="display:flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

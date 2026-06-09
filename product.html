@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Classy Drip Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-announcement">
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar" id="announcementBar">
+    <span>🚚 Free Delivery in Dhaka City on Orders Above 2000৳</span>
+    <span style="color:rgba(255,255,255,0.4)">|</span>
+    <a href="shop.html">Shop New Arrivals →</a>
+    <button onclick="document.getElementById('announcementBar').classList.add('hidden'); document.body.classList.remove('has-announcement');" style="background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:18px;position:absolute;right:20px;">×</button>
+  </div>
+
+  <!-- MOBILE NAV OVERLAY + DRAWER -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+    <button class="mobile-nav-close" id="mobileNavClose">×</button>
+    <div class="mobile-nav-logo">Classy Drip</div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="shop.html" class="mobile-nav-link">Shop All</a></li>
+      <li><a href="shop.html?category=Men" class="mobile-nav-link">Men's Collection</a></li>
+      <li><a href="shop.html?category=Women" class="mobile-nav-link">Women's Collection</a></li>
+    </ul>
+    <div class="mobile-nav-footer"><p>© 2026 Classy Drip. Elevate Your Style.</p></div>
+  </nav>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="scrolled" id="mainHeader">
+    <div class="container header-container">
+      <button class="hamburger-btn nav-icon" id="hamburgerBtn" title="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.jpg" alt="Classy Drip Logo" class="logo-img">
+        <span class="logo-text">Classy Drip</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop All</a></li>
+          <li><a href="shop.html?category=Men" class="nav-link">Men</a></li>
+          <li><a href="shop.html?category=Women" class="nav-link">Women</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-icon" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <a href="#" class="nav-icon" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </a>
+        <button class="nav-icon btn-open-cart" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRODUCT DETAIL SECTION -->
+  <main class="container">
+    <div class="product-detail-layout" id="productDetailLayout">
+      
+      <!-- Left: Product Image Gallery -->
+      <section class="product-gallery">
+        <img id="mainProductImage" src="assets/black-tshirt.png" alt="Product Image" class="product-main-img">
+        <div class="product-thumbnails" id="productThumbnails">
+          <!-- Loaded dynamically -->
+        </div>
+      </section>
+
+      <!-- Right: Product Information & Controls -->
+      <section class="detail-info">
+        <h1 class="detail-name" id="productName">Classy Drip Signature Tee</h1>
+        
+        <div class="detail-price-row">
+          <span class="detail-price" id="productPrice">0 Tk</span>
+          <span class="detail-price-old" id="productPriceOld">0 Tk</span>
+        </div>
+
+        <p class="detail-desc" id="productDescription">Loading product descriptions...</p>
+
+        <!-- Size Variant Selector -->
+        <div class="detail-size-selector">
+          <h3 class="detail-option-title">Select Size</h3>
+          <div class="size-pill-grid" id="sizeSelector">
+            <!-- Loaded dynamically -->
+          </div>
+        </div>
+
+        <!-- Quantity Control -->
+        <div class="detail-qty-selector">
+          <h3 class="detail-option-title">Quantity</h3>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="adjustDetailQty(-1)">-</button>
+            <input type="text" id="qtyInput" class="qty-input" value="1" readonly>
+            <button class="qty-btn" onclick="adjustDetailQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Purchase Action Buttons -->
+        <div class="detail-actions">
+          <button class="btn-add-to-cart" id="btnAddToCart">Add to Shopping Bag</button>
+          <button class="btn-detail-wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
+
+        <!-- Store Guarantees / Features -->
+        <div class="detail-features">
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>Free delivery in Dhaka City on orders above 2000 Tk</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>Easy 7-day hassle-free replacement & exchanges</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>Pre-shrunk, premium double-combed heavy organic cotton</span>
+          </div>
+        </div>
+      </section>
+      
+    </div>
+
+    <!-- TABS SECTION (Size Chart & Details) -->
+    <section class="product-tabs">
+      <ul class="tabs-nav">
+        <li><button class="tab-btn active" data-tab-target="tab_details">Product Details</button></li>
+        <li><button class="tab-btn" data-tab-target="tab_size_chart">Size Chart</button></li>
+        <li><button class="tab-btn" data-tab-target="tab_shipping">Shipping & Returns</button></li>
+      </ul>
+
+      <!-- Tab Content: Details -->
+      <div class="tab-content active" id="tab_details">
+        <p style="margin-bottom: 15px;">Our garments are built to match international premium streetwear standards. Here are the core specifications:</p>
+        <ul style="padding-left: 20px; display:flex; flex-direction:column; gap:8px; font-size:14px; color:#555;">
+          <li>Fabric Composition: 100% Organic Heavy Cotton.</li>
+          <li>Knit construction: 220 GSM single jersey.</li>
+          <li>Washing treatments: Bio-washed for extra softness, anti-pilling coat.</li>
+          <li>Fit profile: Custom relaxed aesthetic with ribbed crewneck style.</li>
+        </ul>
+      </div>
+
+      <!-- Tab Content: Size Chart -->
+      <div class="tab-content" id="tab_size_chart">
+        <div class="size-chart-unit-toggle">
+          <button class="unit-btn active" data-unit="inch">Inches</button>
+          <button class="unit-btn" data-unit="cm">Centimeters (CM)</button>
+        </div>
+        
+        <div class="size-table-wrapper">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Chest (Half-width)</th>
+              <th>Length (Body)</th>
+              <th>Sleeve Length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row_S">
+              <td>S</td>
+              <td>38</td>
+              <td>26</td>
+              <td>7.5</td>
+            </tr>
+            <tr id="row_M">
+              <td>M</td>
+              <td>40</td>
+              <td>27</td>
+              <td>8</td>
+            </tr>
+            <tr id="row_L">
+              <td>L</td>
+              <td>42</td>
+              <td>28</td>
+              <td>8.5</td>
+            </tr>
+            <tr id="row_XL">
+              <td>XL</td>
+              <td>44</td>
+              <td>29</td>
+              <td>9</td>
+            </tr>
+            <tr id="row_2XL">
+              <td>2XL</td>
+              <td>46</td>
+              <td>30</td>
+              <td>9.5</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <!-- Tab Content: Shipping -->
+      <div class="tab-content" id="tab_shipping">
+        <p style="font-size: 14px; color: #555; line-height: 1.8;">
+          All deliveries inside Dhaka City are processed within 24 to 48 hours. Deliveries outside Dhaka are handled via Pathao Courier and Steadfast Logistics, taking approximately 3-4 business days.<br><br>
+          If your size does not fit perfectly, we offer completely free replacement exchanges. Simply contact our support helpline or drop by one of our outlet stores with your invoice summary.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FREQUENTLY BOUGHT TOGETHER -->
+  <section class="fbt-section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:36px;">Frequently Bought Together</h2>
+      <div class="fbt-layout" id="fbtLayout">
+        <!-- Loaded dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPPING CART DRAWER (Shared) -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button class="cart-drawer-close" id="closeCart">×</button>
+    </div>
+    
+    <div class="cart-items-container" id="cartItems">
+      <!-- Loaded dynamically via app.js -->
+    </div>
+    
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">0 Tk</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">
+        Proceed to Checkout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Classy Drip</div>
+          <p class="footer-about-text">Premium luxury streetwear designed to elevate your everyday aesthetics. Bold design, meticulous tailoring.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html" class="footer-link">All Products</a></li>
+            <li><a href="shop.html?category=Men" class="footer-link">Men's Tees</a></li>
+            <li><a href="shop.html?category=Women" class="footer-link">Women's Collection</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Size Guides</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Store Locator</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p class="footer-newsletter-text">Join the list and get notified on exclusive designer drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+            <input type="email" placeholder="Your Email" class="newsletter-input" required>
+            <button type="submit" class="btn-newsletter">Join</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>© 2026 Classy Drip Store. All Rights Reserved.</div>
+        <div style="display:flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

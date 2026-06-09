@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Classy Drip Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MOBILE NAV OVERLAY + DRAWER -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav-drawer" id="mobileNavDrawer">
+    <button class="mobile-nav-close" id="mobileNavClose">×</button>
+    <div class="mobile-nav-logo">Classy Drip</div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="shop.html" class="mobile-nav-link">Shop All</a></li>
+      <li><a href="shop.html?category=Men" class="mobile-nav-link">Men's Collection</a></li>
+      <li><a href="shop.html?category=Women" class="mobile-nav-link">Women's Collection</a></li>
+    </ul>
+    <div class="mobile-nav-footer"><p>© 2026 Classy Drip. Elevate Your Style.</p></div>
+  </nav>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="scrolled">
+    <div class="container header-container">
+      <button class="hamburger-btn nav-icon" id="hamburgerBtn" title="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.jpg" alt="Classy Drip Logo" class="logo-img">
+        <span class="logo-text">Classy Drip</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop All</a></li>
+          <li><a href="shop.html?category=Men" class="nav-link">Men</a></li>
+          <li><a href="shop.html?category=Women" class="nav-link">Women</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-icon" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+        <a href="#" class="nav-icon" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </a>
+        <button class="nav-icon btn-open-cart" title="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CATALOG CONTENT -->
+  <main class="container">
+    <div class="shop-layout">
+      
+      <!-- SIDEBAR FILTERS -->
+      <aside class="shop-sidebar">
+        <!-- Search bar inside filters -->
+        <div class="filter-section">
+          <h3 class="filter-title">Search</h3>
+          <input type="text" id="catalogSearch" placeholder="Search collection..." class="form-input" style="width:100%;">
+        </div>
+
+        <!-- Category Checkboxes -->
+        <div class="filter-section">
+          <h3 class="filter-title">Category</h3>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label>
+                <input type="checkbox" class="filter-checkbox" data-filter-type="categories" value="Men">
+                <span class="filter-checkbox"></span>
+                Men
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                <input type="checkbox" class="filter-checkbox" data-filter-type="categories" value="Women">
+                <span class="filter-checkbox"></span>
+                Women
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Apparel Type Checkboxes -->
+        <div class="filter-section">
+          <h3 class="filter-title">Garment Type</h3>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label>
+                <input type="checkbox" class="filter-checkbox" data-filter-type="types" value="T-Shirt">
+                <span class="filter-checkbox"></span>
+                T-Shirt
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                <input type="checkbox" class="filter-checkbox" data-filter-type="types" value="Sweatshirt">
+                <span class="filter-checkbox"></span>
+                Sweatshirt
+              </label>
+            </li>
+            <li class="filter-item">
+              <label>
+                <input type="checkbox" class="filter-checkbox" data-filter-type="types" value="Premium Sets">
+                <span class="filter-checkbox"></span>
+                Premium Sets
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sizes Selection Grid -->
+        <div class="filter-section">
+          <h3 class="filter-title">Sizes</h3>
+          <div class="size-pill-grid">
+            <input type="checkbox" id="size_filter_s" value="S" class="size-pill-checkbox">
+            <label for="size_filter_s" class="size-pill-label">S</label>
+            
+            <input type="checkbox" id="size_filter_m" value="M" class="size-pill-checkbox">
+            <label for="size_filter_m" class="size-pill-label">M</label>
+            
+            <input type="checkbox" id="size_filter_l" value="L" class="size-pill-checkbox">
+            <label for="size_filter_l" class="size-pill-label">L</label>
+            
+            <input type="checkbox" id="size_filter_xl" value="XL" class="size-pill-checkbox">
+            <label for="size_filter_xl" class="size-pill-label">XL</label>
+            
+            <input type="checkbox" id="size_filter_2xl" value="2XL" class="size-pill-checkbox">
+            <label for="size_filter_2xl" class="size-pill-label">2XL</label>
+          </div>
+        </div>
+
+        <!-- Price Range Limiters -->
+        <div class="filter-section">
+          <h3 class="filter-title">Price Range</h3>
+          <div class="price-range-inputs">
+            <input type="number" id="priceMin" placeholder="Min" class="price-input" value="0">
+            <input type="number" id="priceMax" placeholder="Max" class="price-input" value="3000">
+          </div>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS CATALOG GRID -->
+      <section>
+        <div class="product-grid" id="catalogGrid">
+          <!-- Loaded dynamically via app.js -->
+        </div>
+      </section>
+      
+    </div>
+  </main>
+
+  <!-- SHOPPING CART DRAWER (Shared) -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button class="cart-drawer-close" id="closeCart">×</button>
+    </div>
+    
+    <div class="cart-items-container" id="cartItems">
+      <!-- Loaded dynamically via app.js -->
+    </div>
+    
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">0 Tk</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">
+        Proceed to Checkout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Classy Drip</div>
+          <p class="footer-about-text">Premium luxury streetwear designed to elevate your everyday aesthetics. Bold design, meticulous tailoring.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html" class="footer-link">All Products</a></li>
+            <li><a href="shop.html?category=Men" class="footer-link">Men's Tees</a></li>
+            <li><a href="shop.html?category=Women" class="footer-link">Women's Collection</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Size Guides</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Store Locator</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-column-title">Newsletter</h4>
+          <p class="footer-newsletter-text">Join the list and get notified on exclusive designer drops.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+            <input type="email" placeholder="Your Email" class="newsletter-input" required>
+            <button type="submit" class="btn-newsletter">Join</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>© 2026 Classy Drip Store. All Rights Reserved.</div>
+        <div style="display:flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
