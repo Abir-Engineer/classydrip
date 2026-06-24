@@ -5,6 +5,7 @@
 
 // 1. PRODUCT CATALOG DATA
 const PRODUCTS = [
+  // Men's Products
   {
     id: 1,
     name: "Classy Drip Signature Black Tee",
@@ -45,30 +46,110 @@ const PRODUCTS = [
     badge: "Limited Edition"
   },
   {
+    id: 5,
+    name: "Minimalist Oversized Tee",
+    price: 890,
+    oldPrice: 1200,
+    category: "Men",
+    type: "T-Shirt",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80"],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    description: "Drop-shoulder relaxed fit streetwear essential. Cut from heavy 240 GSM organic cotton. Extremely durable, minimalist, and styled with subtle label tags.",
+    badge: "Trending"
+  },
+  {
+    id: 7,
+    name: "Premium Black Bomber Jacket",
+    price: 2990,
+    oldPrice: 3500,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Luxury bomber jacket for the modern street aesthetic. Lightweight, waterproof exterior with premium inner lining.",
+    badge: "Hot"
+  },
+  {
+    id: 8,
+    name: "Classic Urban Cargo Pants",
+    price: 1890,
+    oldPrice: 2200,
+    category: "Men",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Utilitarian cargo pants crafted from durable premium twill. Features 6 robust pockets and adjustable ankle cuffs.",
+    badge: ""
+  },
+  {
+    id: 9,
+    name: "Essential Grey Hoodie",
+    price: 1490,
+    oldPrice: 1800,
+    category: "Men",
+    type: "Sweatshirt",
+    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80"],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Heavyweight fleece hoodie in versatile ash grey. Ribbed cuffs, kangaroo pocket, and double-lined hood.",
+    badge: "Basic"
+  },
+  {
+    id: 10,
+    name: "Distressed Denim Jacket",
+    price: 3290,
+    oldPrice: 4000,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Vintage washed denim with custom hardware and subtle distressing. An enduring streetwear staple.",
+    badge: ""
+  },
+  {
+    id: 11,
+    name: "Graphic Street Tee",
+    price: 950,
+    oldPrice: 1300,
+    category: "Men",
+    type: "T-Shirt",
+    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Bold back graphic printed on 240 GSM cotton. Ribbed neck and relaxed fit.",
+    badge: ""
+  },
+  {
+    id: 12,
+    name: "Textured Knit Polo",
+    price: 1290,
+    oldPrice: 1600,
+    category: "Men",
+    type: "Polo",
+    image: "https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Elevated knitwear for a smart casual streetwear look. Breathable, structured, and minimal.",
+    badge: "New"
+  },
+
+  // Women's Products
+  {
     id: 4,
     name: "Classy Drip Streetwear Set (Women)",
     price: 2290,
     oldPrice: 3000,
     category: "Women",
     type: "Premium Sets",
-    image: "assets/hero.png",
-    images: ["assets/hero.png", "assets/white-tshirt.png"],
+    image: "assets/hero2.png",
+    images: ["assets/hero2.png", "assets/white-tshirt.png"],
     sizes: ["S", "M", "L"],
     description: "Curated women's high-fashion set containing an oversized luxury hoodie and slim cargo pants. Engineered from premium French terry fabric. Embroidered crown accents.",
     badge: "Sale"
-  },
-  {
-    id: 5,
-    name: "Classy Drip Minimalist Oversized Tee",
-    price: 890,
-    oldPrice: 1200,
-    category: "Men",
-    type: "T-Shirt",
-    image: "assets/black-tshirt.png",
-    images: ["assets/black-tshirt.png", "assets/logo.jpg"],
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    description: "Drop-shoulder relaxed fit streetwear essential. Cut from heavy 240 GSM organic cotton. Extremely durable, minimalist, and styled with subtle label tags.",
-    badge: "Trending"
   },
   {
     id: 6,
@@ -77,11 +158,115 @@ const PRODUCTS = [
     oldPrice: 1750,
     category: "Women",
     type: "Sweatshirt",
-    image: "assets/white-tshirt.png",
-    images: ["assets/white-tshirt.png", "assets/logo.jpg"],
+    image: "assets/hero3.png",
+    images: ["assets/hero3.png", "assets/logo.jpg"],
     sizes: ["S", "M", "L", "XL"],
     description: "Elegant fleece-lined crewneck sweatshirt in soft cream white. Minimal branding with our signature crown motif. Ideal for cozy evenings or classy travel outfits.",
     badge: ""
+  },
+  {
+    id: 13,
+    name: "Cropped Utility Jacket",
+    price: 2490,
+    oldPrice: 3000,
+    category: "Women",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1550614000-4b95d4edaa22?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1550614000-4b95d4edaa22?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Boxy fit cropped jacket with utility pockets and durable zipper hardware.",
+    badge: "Trending"
+  },
+  {
+    id: 14,
+    name: "Ribbed Knit Tank",
+    price: 690,
+    oldPrice: 900,
+    category: "Women",
+    type: "Top",
+    image: "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Form-fitting ribbed tank top, perfect for layering or summer streetwear.",
+    badge: "Basic"
+  },
+  {
+    id: 15,
+    name: "Oversized Vintage Wash Tee",
+    price: 890,
+    oldPrice: 1100,
+    category: "Women",
+    type: "T-Shirt",
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Relaxed vintage wash tee with dropped shoulders. Premium heavy cotton.",
+    badge: ""
+  },
+  {
+    id: 16,
+    name: "High-Waist Parachute Pants",
+    price: 1790,
+    oldPrice: 2100,
+    category: "Women",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Lightweight parachute pants with adjustable toggles and a relaxed fit.",
+    badge: "Hot"
+  },
+  {
+    id: 17,
+    name: "Seamless Bike Shorts",
+    price: 850,
+    oldPrice: 1200,
+    category: "Women",
+    type: "Bottoms",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "High-waisted seamless shorts for an athletic streetwear vibe.",
+    badge: ""
+  },
+  {
+    id: 18,
+    name: "Zip-Up Fleece Hoodie",
+    price: 1690,
+    oldPrice: 2000,
+    category: "Women",
+    type: "Sweatshirt",
+    image: "https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Cozy zip-up hoodie in soft fleece fabric. Perfect for effortless styling.",
+    badge: "New Arrival"
+  },
+  {
+    id: 19,
+    name: "Satin Cargo Skirt",
+    price: 1590,
+    oldPrice: 1900,
+    category: "Women",
+    type: "Bottoms",
+    image: "https://images.unsplash.com/photo-1582142407894-ec85a1260a46?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1582142407894-ec85a1260a46?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Midi length cargo skirt crafted from premium matte satin.",
+    badge: ""
+  },
+  {
+    id: 20,
+    name: "Premium Mesh Top",
+    price: 990,
+    oldPrice: 1400,
+    category: "Women",
+    type: "Top",
+    image: "https://images.unsplash.com/photo-1434389670869-c8c8c724bbd1?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1434389670869-c8c8c724bbd1?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Long-sleeve mesh top with abstract print. A bold statement piece.",
+    badge: "Limited"
   }
 ];
 
