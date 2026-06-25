@@ -5,268 +5,274 @@
 
 // 1. PRODUCT CATALOG DATA
 const PRODUCTS = [
-  // Men's Products
+  // T-Shirts
   {
     id: 1,
-    name: "Classy Drip Signature Black Tee",
-    price: 790,
-    oldPrice: 1050,
+    name: "Oversized Black Signature Tee",
+    price: 890,
+    oldPrice: 1200,
     category: "Men",
     type: "T-Shirt",
-    image: "assets/black-tshirt.png",
-    images: ["assets/black-tshirt.png", "assets/logo.jpg"],
+    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80", "assets/logo.jpg"],
     sizes: ["S", "M", "L", "XL", "2XL"],
-    description: "Crafted from 100% premium heavy combed cotton (220 GSM). Featuring the luxury C.D. monogram with a gold-threaded royal crown embroidered on the left chest. Bio-washed for ultimate softness and pre-shrunk for an enduring classic fit.",
+    description: "Premium heavy-weight black tee with relaxed fit. 240 GSM combed cotton.",
     badge: "Best Seller"
   },
   {
     id: 2,
-    name: "Classy Drip Signature White Tee",
+    name: "Classic White Graphic Tee",
     price: 790,
     oldPrice: 1050,
     category: "Men",
     type: "T-Shirt",
-    image: "assets/white-tshirt.png",
-    images: ["assets/white-tshirt.png", "assets/logo.jpg"],
-    sizes: ["S", "M", "L", "XL"],
-    description: "Premium heavy-weight white tee tailored with custom-knit ribbing. Displays the iconic black-embroidered crown monogram. Seamless side tailoring offers a comfortable structure for streetwear layering.",
-    badge: "New Arrival"
-  },
-  {
-    id: 3,
-    name: "Classy Drip Streetwear Set (Men)",
-    price: 2490,
-    oldPrice: 3200,
-    category: "Men",
-    type: "Premium Sets",
-    image: "assets/hero.png",
-    images: ["assets/hero.png", "assets/black-tshirt.png"],
-    sizes: ["M", "L", "XL"],
-    description: "A complete limited-edition streetwear suit. Includes the premium matching crew neck drop-shoulder hoodie and relaxed utility trousers. Designed for comfort, warmth, and high-fashion aesthetics.",
-    badge: "Limited Edition"
-  },
-  {
-    id: 5,
-    name: "Minimalist Oversized Tee",
-    price: 890,
-    oldPrice: 1200,
-    category: "Men",
-    type: "T-Shirt",
     image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
     images: ["https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80"],
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    description: "Drop-shoulder relaxed fit streetwear essential. Cut from heavy 240 GSM organic cotton. Extremely durable, minimalist, and styled with subtle label tags.",
-    badge: "Trending"
-  },
-  {
-    id: 7,
-    name: "Premium Black Bomber Jacket",
-    price: 2990,
-    oldPrice: 3500,
-    category: "Men",
-    type: "Jacket",
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"],
-    sizes: ["M", "L", "XL"],
-    description: "Luxury bomber jacket for the modern street aesthetic. Lightweight, waterproof exterior with premium inner lining.",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Trendy graphic tee with Dhaka urban streetwear print. 100% organic cotton.",
     badge: "Hot"
   },
   {
-    id: 8,
-    name: "Classic Urban Cargo Pants",
-    price: 1890,
-    oldPrice: 2200,
-    category: "Men",
-    type: "Pants",
-    image: "https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80"],
-    sizes: ["M", "L", "XL"],
-    description: "Utilitarian cargo pants crafted from durable premium twill. Features 6 robust pockets and adjustable ankle cuffs.",
-    badge: ""
-  },
-  {
-    id: 9,
-    name: "Essential Grey Hoodie",
-    price: 1490,
-    oldPrice: 1800,
-    category: "Men",
-    type: "Sweatshirt",
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80"],
-    sizes: ["S", "M", "L", "XL"],
-    description: "Heavyweight fleece hoodie in versatile ash grey. Ribbed cuffs, kangaroo pocket, and double-lined hood.",
-    badge: "Basic"
-  },
-  {
-    id: 10,
-    name: "Distressed Denim Jacket",
-    price: 3290,
-    oldPrice: 4000,
-    category: "Men",
-    type: "Jacket",
-    image: "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80"],
-    sizes: ["M", "L", "XL"],
-    description: "Vintage washed denim with custom hardware and subtle distressing. An enduring streetwear staple.",
-    badge: ""
-  },
-  {
-    id: 11,
-    name: "Graphic Street Tee",
+    id: 3,
+    name: "Minimalist Drop Shoulder Tee",
     price: 950,
     oldPrice: 1300,
     category: "Men",
     type: "T-Shirt",
-    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Bold back graphic printed on 240 GSM cotton. Ribbed neck and relaxed fit.",
-    badge: ""
-  },
-  {
-    id: 12,
-    name: "Textured Knit Polo",
-    price: 1290,
-    oldPrice: 1600,
-    category: "Men",
-    type: "Polo",
-    image: "https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1593998066526-65fcab3021a2?w=600&q=80"],
+    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80"],
     sizes: ["M", "L", "XL"],
-    description: "Elevated knitwear for a smart casual streetwear look. Breathable, structured, and minimal.",
+    description: "Solid color drop shoulder fit, perfect for everyday casual wear.",
     badge: "New"
   },
-
-  // Women's Products
   {
     id: 4,
-    name: "Classy Drip Streetwear Set (Women)",
-    price: 2290,
-    oldPrice: 3000,
-    category: "Women",
-    type: "Premium Sets",
-    image: "assets/hero2.png",
-    images: ["assets/hero2.png", "assets/white-tshirt.png"],
-    sizes: ["S", "M", "L"],
-    description: "Curated women's high-fashion set containing an oversized luxury hoodie and slim cargo pants. Engineered from premium French terry fabric. Embroidered crown accents.",
-    badge: "Sale"
-  },
-  {
-    id: 6,
-    name: "Classy Drip Classic Crewneck Sweatshirt",
-    price: 1290,
-    oldPrice: 1750,
-    category: "Women",
-    type: "Sweatshirt",
-    image: "assets/hero3.png",
-    images: ["assets/hero3.png", "assets/logo.jpg"],
-    sizes: ["S", "M", "L", "XL"],
-    description: "Elegant fleece-lined crewneck sweatshirt in soft cream white. Minimal branding with our signature crown motif. Ideal for cozy evenings or classy travel outfits.",
+    name: "Streetwear Boxy Fit T-Shirt",
+    price: 990,
+    oldPrice: 1400,
+    category: "Men",
+    type: "T-Shirt",
+    image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=600&q=80"],
+    sizes: ["M", "L", "XL", "2XL"],
+    description: "Vintage washed streetwear tee in boxy fit. Heavyweight fabric.",
     badge: ""
   },
   {
-    id: 13,
-    name: "Cropped Utility Jacket",
-    price: 2490,
-    oldPrice: 3000,
-    category: "Women",
-    type: "Jacket",
-    image: "https://images.unsplash.com/photo-1550614000-4b95d4edaa22?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1550614000-4b95d4edaa22?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Boxy fit cropped jacket with utility pockets and durable zipper hardware.",
-    badge: "Trending"
-  },
-  {
-    id: 14,
-    name: "Ribbed Knit Tank",
-    price: 690,
-    oldPrice: 900,
-    category: "Women",
-    type: "Top",
-    image: "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Form-fitting ribbed tank top, perfect for layering or summer streetwear.",
-    badge: "Basic"
-  },
-  {
-    id: 15,
-    name: "Oversized Vintage Wash Tee",
-    price: 890,
-    oldPrice: 1100,
-    category: "Women",
+    id: 5,
+    name: "Essential Acid Wash Tee",
+    price: 1050,
+    oldPrice: 1500,
+    category: "Men",
     type: "T-Shirt",
     image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80",
     images: ["https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&q=80"],
     sizes: ["S", "M", "L"],
-    description: "Relaxed vintage wash tee with dropped shoulders. Premium heavy cotton.",
+    description: "Unique acid wash finish with subtle distressed details.",
+    badge: "Trending"
+  },
+  
+  // Shirts
+  {
+    id: 6,
+    name: "Premium Linen Button-Up",
+    price: 1890,
+    oldPrice: 2500,
+    category: "Men",
+    type: "Shirt",
+    image: "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?w=600&q=80"],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Lightweight and breathable white linen shirt. Perfect for smart casual looks.",
+    badge: "Summer Essential"
+  },
+  {
+    id: 7,
+    name: "Navy Blue Oxford Shirt",
+    price: 1650,
+    oldPrice: 2200,
+    category: "Men",
+    type: "Shirt",
+    image: "https://images.unsplash.com/photo-1602810316428-5b9e47ce046d?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1602810316428-5b9e47ce046d?w=600&q=80"],
+    sizes: ["M", "L", "XL", "2XL"],
+    description: "Classic navy oxford cloth button-down. Tailored fit.",
+    badge: ""
+  },
+  {
+    id: 8,
+    name: "Heavyweight Flannel Overshirt",
+    price: 2200,
+    oldPrice: 2800,
+    category: "Men",
+    type: "Shirt",
+    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Thick brushed flannel shirt with twin chest pockets. Wear it open or closed.",
+    badge: "New"
+  },
+  {
+    id: 9,
+    name: "Casual Mandarin Collar Shirt",
+    price: 1450,
+    oldPrice: 1900,
+    category: "Men",
+    type: "Shirt",
+    image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80"],
+    sizes: ["S", "M", "L"],
+    description: "Contemporary mandarin collar in soft cotton blend. Black and sleek.",
+    badge: ""
+  },
+
+  // Pants
+  {
+    id: 10,
+    name: "Urban Black Cargo Pants",
+    price: 2490,
+    oldPrice: 3200,
+    category: "Men",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1624378440846-51d02c842fb0?w=600&q=80"],
+    sizes: ["28", "30", "32", "34", "36"],
+    description: "Multi-pocket tactical cargo pants made from durable ripstop fabric.",
+    badge: "Hot"
+  },
+  {
+    id: 11,
+    name: "Slim Fit Tech Joggers",
+    price: 1890,
+    oldPrice: 2400,
+    category: "Men",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Modern tech-fleece joggers with waterproof zipper details.",
+    badge: ""
+  },
+  {
+    id: 12,
+    name: "Relaxed Fit Chino Trousers",
+    price: 2100,
+    oldPrice: 2700,
+    category: "Men",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80"],
+    sizes: ["30", "32", "34", "36"],
+    description: "Premium cotton twill chinos tailored for a comfortable relaxed fit.",
+    badge: "Premium"
+  },
+  {
+    id: 13,
+    name: "Vintage Washed Denim Jeans",
+    price: 2890,
+    oldPrice: 3600,
+    category: "Men",
+    type: "Pants",
+    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80"],
+    sizes: ["28", "30", "32", "34"],
+    description: "Classic straight fit denim with a subtle vintage wash and distressed hems.",
+    badge: ""
+  },
+
+  // Jackets
+  {
+    id: 14,
+    name: "Luxury Black Bomber Jacket",
+    price: 3490,
+    oldPrice: 4500,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"],
+    sizes: ["M", "L", "XL", "2XL"],
+    description: "Sleek nylon bomber jacket with premium lining and custom metal hardware.",
+    badge: "Trending"
+  },
+  {
+    id: 15,
+    name: "Distressed Streetwear Denim Jacket",
+    price: 3200,
+    oldPrice: 4200,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=600&q=80"],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Heavy duty denim jacket featuring hand-distressed details for an edgy look.",
     badge: ""
   },
   {
     id: 16,
-    name: "High-Waist Parachute Pants",
-    price: 1790,
-    oldPrice: 2100,
-    category: "Women",
-    type: "Pants",
-    image: "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Lightweight parachute pants with adjustable toggles and a relaxed fit.",
-    badge: "Hot"
+    name: "Lightweight Windbreaker",
+    price: 2290,
+    oldPrice: 2900,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1544441893-675973e31985?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Water-resistant windbreaker jacket, packable and highly versatile.",
+    badge: "New"
   },
   {
     id: 17,
-    name: "Seamless Bike Shorts",
-    price: 850,
-    oldPrice: 1200,
-    category: "Women",
-    type: "Bottoms",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "High-waisted seamless shorts for an athletic streetwear vibe.",
-    badge: ""
+    name: "Winter Puffer Jacket",
+    price: 4500,
+    oldPrice: 5800,
+    category: "Men",
+    type: "Jacket",
+    image: "https://images.unsplash.com/photo-1551028719-0c124a111244?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1551028719-0c124a111244?w=600&q=80"],
+    sizes: ["M", "L", "XL"],
+    description: "Maximum warmth with an insulated core. Sleek matte black finish.",
+    badge: "Winter"
   },
+
+  // Shoes
   {
     id: 18,
-    name: "Zip-Up Fleece Hoodie",
-    price: 1690,
-    oldPrice: 2000,
-    category: "Women",
-    type: "Sweatshirt",
-    image: "https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1554568218-0f1715e72254?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Cozy zip-up hoodie in soft fleece fabric. Perfect for effortless styling.",
-    badge: "New Arrival"
+    name: "Classy High-Top Sneakers",
+    price: 3800,
+    oldPrice: 4800,
+    category: "Men",
+    type: "Shoes",
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&q=80"],
+    sizes: ["40", "41", "42", "43", "44"],
+    description: "Premium leather high-top sneakers with a durable rubber sole.",
+    badge: "Premium"
   },
   {
     id: 19,
-    name: "Satin Cargo Skirt",
-    price: 1590,
-    oldPrice: 1900,
-    category: "Women",
-    type: "Bottoms",
-    image: "https://images.unsplash.com/photo-1582142407894-ec85a1260a46?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1582142407894-ec85a1260a46?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Midi length cargo skirt crafted from premium matte satin.",
-    badge: ""
+    name: "Minimalist White Canvas Shoes",
+    price: 2100,
+    oldPrice: 2800,
+    category: "Men",
+    type: "Shoes",
+    image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&q=80"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
+    description: "Clean, everyday white canvas sneakers. Lightweight and comfortable.",
+    badge: "Best Seller"
   },
   {
     id: 20,
-    name: "Premium Mesh Top",
-    price: 990,
-    oldPrice: 1400,
-    category: "Women",
-    type: "Top",
-    image: "https://images.unsplash.com/photo-1434389670869-c8c8c724bbd1?w=600&q=80",
-    images: ["https://images.unsplash.com/photo-1434389670869-c8c8c724bbd1?w=600&q=80"],
-    sizes: ["S", "M", "L"],
-    description: "Long-sleeve mesh top with abstract print. A bold statement piece.",
-    badge: "Limited"
+    name: "Urban Suede Loafers",
+    price: 3200,
+    oldPrice: 4000,
+    category: "Men",
+    type: "Shoes",
+    image: "https://images.unsplash.com/photo-1614252339460-50d4f5b5f36e?w=600&q=80",
+    images: ["https://images.unsplash.com/photo-1614252339460-50d4f5b5f36e?w=600&q=80"],
+    sizes: ["40", "41", "42", "43"],
+    description: "Sophisticated suede loafers designed for a refined streetwear aesthetic.",
+    badge: ""
   }
 ];
 
@@ -337,6 +343,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Default Home Page
     initHomePage();
   }
+  
+  // Initialize new features
+  initChatbot();
+  initScrollAnimations();
 });
 
 function setupHeaderScroll() {
@@ -1050,7 +1060,7 @@ function initCheckoutPage() {
       const container = document.querySelector(".container.checkout-page-container");
       if (container) {
         container.innerHTML = `
-          <div class="success-container">
+          <div class="success-container animate-fade-in">
             <div class="success-icon">✓</div>
             <h1 class="success-title">Order Confirmed</h1>
             <p class="success-text">Thank you, <strong>${name}</strong>! Your order has been successfully placed. We've sent an order confirmation details SMS to <strong>${phone}</strong>.</p>
@@ -1061,4 +1071,89 @@ function initCheckoutPage() {
       }
     });
   }
+}
+
+// --- 5. AI CHATBOT LOGIC ---
+function initChatbot() {
+  const toggleBtn = document.getElementById('chatbotToggle');
+  const chatbotWindow = document.getElementById('chatbotWindow');
+  const closeBtn = document.getElementById('closeChatbot');
+  const sendBtn = document.getElementById('sendChat');
+  const inputField = document.getElementById('chatInput');
+  const messagesBody = document.getElementById('chatMessages');
+
+  if(!toggleBtn || !chatbotWindow) return;
+
+  function toggleChatbot() {
+    chatbotWindow.classList.toggle('active');
+    if(chatbotWindow.classList.contains('active')) {
+      inputField.focus();
+    }
+  }
+
+  toggleBtn.addEventListener('click', toggleChatbot);
+  closeBtn.addEventListener('click', () => chatbotWindow.classList.remove('active'));
+
+  function addMessage(text, isBot = false) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `chat-message ${isBot ? 'bot-message' : 'user-message'}`;
+    msgDiv.textContent = text;
+    messagesBody.appendChild(msgDiv);
+    messagesBody.scrollTop = messagesBody.scrollHeight;
+  }
+
+  function handleUserSend() {
+    const text = inputField.value.trim();
+    if(!text) return;
+
+    addMessage(text, false);
+    inputField.value = '';
+
+    // Show typing indicator
+    const typingDiv = document.createElement('div');
+    typingDiv.className = 'chat-message bot-message typing-indicator';
+    typingDiv.innerHTML = '<span>.</span><span>.</span><span>.</span>';
+    messagesBody.appendChild(typingDiv);
+    messagesBody.scrollTop = messagesBody.scrollHeight;
+
+    setTimeout(() => {
+      typingDiv.remove();
+      const lower = text.toLowerCase();
+      if(lower.includes('size') || lower.includes('fit')) {
+        addMessage('Our garments are regular to oversized fit. Please check the Size Guide on the product page!', true);
+      } else if (lower.includes('delivery') || lower.includes('shipping')) {
+        addMessage('Delivery inside Dhaka takes 24-48 hours. Outside Dhaka takes 3-5 days.', true);
+      } else {
+        addMessage('For detailed inquiries, you can reach us directly on WhatsApp.', true);
+        const waLink = document.createElement('a');
+        waLink.href = 'https://wa.me/8801700000000';
+        waLink.target = '_blank';
+        waLink.className = 'chat-action-link';
+        waLink.textContent = 'Chat on WhatsApp';
+        messagesBody.appendChild(waLink);
+        messagesBody.scrollTop = messagesBody.scrollHeight;
+      }
+    }, 1200);
+  }
+
+  sendBtn.addEventListener('click', handleUserSend);
+  inputField.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') handleUserSend();
+  });
+}
+
+// --- 6. SCROLL ANIMATIONS ---
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.category-card, .product-card, .section-header, .trust-item, .promo-banner-content');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('animate-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  elements.forEach(el => observer.observe(el));
 }
